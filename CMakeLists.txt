@@ -48,7 +48,11 @@ target_sources(sqlite_orm INTERFACE
 
 target_include_directories(sqlite_orm INTERFACE
 	$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-	$<INSTALL_INTERFACE:include>)
+	$<INSTALL_INTERFACE:include>
+	)
+
+target_include_directories(sqlite_orm INTERFACE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../sqlite3>)
+target_link_directories(sqlite_orm INTERFACE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../sqlite3>)
 
 include(ucm)
 
