@@ -187,7 +187,11 @@ namespace sqlite_orm {
              }},
             {sqlite_type::BLOB,
              {
-                 std::regex("BLOB"),
+                 std::regex("BLOB"), 
+                 std::regex("POINT"),
+                 std::regex("MULTILINESTRING"),
+                 std::regex("LINESTRING"),                
+                 std::regex("POLYGON")                 
              }},
             {sqlite_type::REAL,
              {
